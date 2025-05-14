@@ -43,3 +43,27 @@ function colorList() {
         relist[i].style.color = 'purple';
     }
 }
+
+// Adding and removing class names
+let leftBox = document.querySelector('.leftBox');
+// Removing class name
+leftBox.classList.remove('col-6');
+// Adding class name
+leftBox.classList.add('col-3');
+
+// Text from an input box
+let textBox = document.getElementById('num');
+// Grabs value of textbox
+console.log(textBox.value);
+
+leftBox.addEventListener('click', () => {
+    // Reviews and grabs latest change to it
+    textBox = document.getElementById('num');
+    console.log(textBox.value);
+
+    leftBox.innerText = textBox.value
+})
+
+// Removing Elements
+let rightBox = document.querySelector('.rightBox');
+rightBox.remove()
